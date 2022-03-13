@@ -4,11 +4,23 @@
   "description": "This is where my personal website will be build on",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "gulp": "gulp"
   },
   "author": "Federico Arzuaga",
   "license": "MIT",
   "devDependencies": {
-    "gulp": "^4.0.2"
+    "@babel/core": "^7.17.5",
+    "@babel/preset-env": "^7.16.11",
+    "browser-sync": "^2.27.7",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^8.0.0",
+    "gulp-babel": "^8.0.0",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-imagemin": "^8.0.0",
+    "gulp-less": "^5.0.0"
+  },
+  "dependencies": {
+    "gulp-htmlmin": "^5.0.1"
   }
 }
