@@ -10,14 +10,20 @@
 <body>
 
     <header class="header">
-        <div class="container">
+        <div class="container container-xl">
 
-            <!-- Menu Icon -->
-            <svg width="40" height="32" viewBox="0 0 40 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <line y1="1" x2="40" y2="1" stroke="#333333" stroke-width="2"/>
-                <line y1="31" x2="40" y2="31" stroke="#333333" stroke-width="2"/>
-                <line y1="16" x2="40" y2="16" stroke="#333333" stroke-width="2"/>
-            </svg>        
+            <div class="flex flex-right flex-middle">
+
+                <!-- Menu Icon -->
+                <a href="#" id="menu-icon" data-mouse="hover">
+                    <svg width="40" height="32" viewBox="0 0 40 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <line y1="1" x2="40" y2="1" stroke="#333333" stroke-width="2"/>
+                        <line y1="31" x2="40" y2="31" stroke="#333333" stroke-width="2"/>
+                        <line y1="16" x2="40" y2="16" stroke="#333333" stroke-width="2"/>
+                    </svg>
+                </a>
+
+            </div>       
 
         </div>
     </header>
@@ -27,12 +33,20 @@
 
         <section id="welcome-section" class="theme-section welcome-section">
             
-            <h1>Hi world!</h1>
+            <div class="container container-xl">
+                <h1>Holanda!</h1>
+            </div>
 
         </section>
 
     </main>
     <!-- Welcome section ENDS -->
-    
+
+    <!-- Custom cursor -->
+    <div class="cursor" id="cursor"></div>
+    <div class="pointer pointer-hover" id="pointer"></div>
+
+    <script type="text/javascript" src="js/cursor.js"></script>
+
 </body>
 </html>

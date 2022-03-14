@@ -19,7 +19,9 @@ function html() {
 // Less
 function less() {
     return src('src/less/**/*.less')
-        .pipe( compileLess() )
+        .pipe( compileLess({
+            plugins: [require('less-plugin-glob')]
+        }))
         .pipe( prefixer() )
         .pipe( minify() )
         .pipe(dest('./dist/css'))
