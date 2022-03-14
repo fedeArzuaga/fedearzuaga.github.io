@@ -18,6 +18,11 @@ body {
     background: @background-100;
 }
 
+a {
+    color: @global-black-color;
+    text-decoration: underline;
+}
+
 .panel {
     position: relative;
 }
@@ -44,6 +49,59 @@ img {
 
     .welcome-img {
         max-height: calc(100vh - 107.7px);
+    }
+    .welcome-container {
+        min-height: calc(100vh - 107.7px);
+    }
+
+    .welcome-content {
+
+        @media screen and (min-width: @break-m) {
+            padding-left: 2.5rem;
+        }
+
+        & > .welcome-content__full-name {
+            font-size: 2rem;
+            font-weight: 500;
+            color: @global-black-color;
+            position: relative;
+
+            @media screen and (min-width: @break-m) {
+                font-size: 3.5rem;
+            }
+
+            &:before {
+                content: "";
+                display: block;
+                position: absolute;
+                width: 100px;
+                height: 5px;
+                bottom: -20px;
+                left: 0;
+                background: @global-black-color;
+            }
+
+        }
+
+        & > .welcome-content__description {
+            font-size: 1.25rem;
+            color: @global-darkgray-color;
+            font-weight: 600;
+            margin-top: 2.75rem;
+
+            #dynamic-text {
+                font-weight: 400;
+            }
+
+            @media screen and (min-width: @break-m) {
+                font-size: 1.5rem;
+            }
+        }
+
+        & > .button {
+            margin-top: 2.5rem;
+        }
+
     }
 
 }

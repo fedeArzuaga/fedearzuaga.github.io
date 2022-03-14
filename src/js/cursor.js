@@ -1,6 +1,6 @@
 const cursor = document.querySelector("#cursor"),
       pointer = document.querySelector("#pointer"),
-      dataMouseElements = Array.from(document.querySelectorAll('[data-mouse="hover"]'));
+      dataMouseElements = Array.from(document.querySelectorAll('[data-mouse="hover"], a'));
 
 document.addEventListener( 'mousemove', e => {
     cursor.classList.add('on-screen');
