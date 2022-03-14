@@ -30,7 +30,7 @@ function less() {
 // Images
 function images() {
     return src(['src/**/*.png','src/**/*.jpg','src/**/*.gif','src/**/*.jpeg'])
-        .pipe(dest('./dist/images'))
+        .pipe(dest('./dist'))
 }
 
 // JS

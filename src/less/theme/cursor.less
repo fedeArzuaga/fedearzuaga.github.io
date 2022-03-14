@@ -1,0 +1,44 @@
+@import "variables";
+
+.cursor,
+.pointer {
+    position: fixed;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    opacity: 0;
+}
+
+.cursor {
+    width: 40px;
+    height: 40px;
+    border: 2px solid @global-darkgray-color;
+    transform: translate(-50%, -50%);
+    
+}
+
+.pointer {
+    width: 6px;
+    height: 6px;
+    background: darken(@global-darkgray-color, 20%);
+    transition: width, height, opacity, left, top;
+    transition-duration: .1s;
+    transition-timing-function: ease-out;
+}
+
+.cursor.on-screen,
+.pointer.on-screen {
+    opacity: 1;
+}
+
+.cursor.hover-effect {
+    opacity: 0;
+}
+
+.pointer.hover-effect {
+    width: 80px;
+    height: 80px;
+    opacity: 0.4;
+    transition-property: width, height, opacity;
+    transition-duration: .2s;
+}
