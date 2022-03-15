@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/uikit.min.css">
     <link rel="stylesheet" href="css/style.css">
     <title>Federico Arzuaga - Frontend Developer</title>
 </head>
@@ -12,16 +13,17 @@
     <header class="header">
         <div class="container container-xl">
 
-            <div class="flex flex-right flex-middle">
+            <div class="uk-flex flex-right uk-flex-middle">
 
-                <!-- Menu Icon -->
-                <a href="#" id="menu-icon" data-mouse="hover">
+                <!-- Menu Mobile BEGINS -->
+                <a href="#" id="menu-icon-header" class="menu-icon-header" data-mouse="hover">
                     <svg width="40" height="32" viewBox="0 0 40 32" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <line y1="1" x2="40" y2="1" stroke="#333333" stroke-width="2"/>
                         <line y1="31" x2="40" y2="31" stroke="#333333" stroke-width="2"/>
                         <line y1="16" x2="40" y2="16" stroke="#333333" stroke-width="2"/>
                     </svg>
-                </a>
+                </a>        
+                <!-- Menu Mobile ENDS -->
 
             </div>       
 
@@ -35,7 +37,7 @@
             
             <div class="container container-xl">
                 
-                <div class="flex flex-middle flex-left welcome-container">
+                <div class="uk-flex uk-flex-middle uk-flex-left welcome-container">
 
                     <div class="panel">
 
@@ -49,7 +51,9 @@
                             Federico Arzuaga
                         </p>
                         
-                        <h1 class="welcome-content__description"><span id="dynamic-text">Frontent</span> Developer</h1>
+                        <h1 class="welcome-content__description">
+                            <span id="dynamic-text">Frontend</span> Developer
+                        </h1>
 
                         <a href="#" class="button" target="_blank">
                             Get in touch
@@ -63,14 +67,248 @@
 
         </section>
 
+        <section id="about-me-section" class="theme-section muted-section about-me-section">
+            
+            <div class="container container-xl">
+                
+                <div class="theme-section uk-flex uk-flex-middle">
+
+                    <div class="uk-panel uk-flex uk-flex-top">
+
+                        <div class="about-me-grid" uk-grid>
+
+                            <div class="uk-width-1-1 uk-width-2-3@m">
+
+                                <h2 class="uk-heading-line"><span>About me</span></h2>
+
+                                <p>
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus dicta, accusamus magnam saepe dolores recusandae reprehenderit ducimus est inventore veniam vero vitae eum impedit nihil unde ex dignissimos? Nisi, nobis sit? Voluptate repellendus soluta, quos, saepe, ipsam alias similique numquam deserunt aliquam temporibus molestias tempora? Deleniti eius animi numquam corporis.
+                                </p>
+
+                                <h3>What are my strengths</h3>
+
+                                <div class="strengths-grid" uk-grid>
+
+                                    <div>
+                                        <div class="uk-panel">
+                                            <ul class="normal-list">
+                                                <li>Written and spoken English (69/100)</li>
+                                                <li>Passionate about team work</li>
+                                                <li>Self-learning enthusiast</li>
+                                                <li>Aesthetically sensitive</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                    <div>
+                                        <div class="uk-panel">
+                                            <ul class="normal-list">
+                                                <li>Well teammates relations</li>
+                                                <li>Possitive attitude towards problems and how to deal with them</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                <h3>Hobbies I love doing</h3>
+
+                                <div class="strengths-grid" uk-grid>
+
+                                    <div>
+                                        <div class="uk-panel">
+                                            <ul class="normal-list">
+                                                <li>Playing the guitar</li>
+                                                <li>Spending time with family <br>(daughter and wife)</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                    <div>
+                                        <div class="uk-panel">
+                                            <ul class="normal-list">
+                                                <li>Go running in the morning</li>
+                                                <li>Getting together with some friends</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                
+                            </div>
+    
+                            <div class="uk-width-1-1 uk-width-1-3@m skills-section">
+
+                                <h3 class="uk-heading-line"><span>Technical skills</span></h3>
+
+                                <div class="uk-grid-small" uk-grid>
+
+                                    <div>
+                                        <div class="uk-panel">
+                                            <img src="images/icons/html_logo.svg" alt="" uk-svg>
+                                        </div>
+                                    </div>
+
+                                    <div>
+                                        <div class="uk-panel">
+                                            <img src="images/icons/css_logo.svg" alt="" uk-svg>
+                                        </div>
+                                    </div>
+
+                                    <div>
+                                        <div class="uk-panel">
+                                            <img src="images/icons/js_logo.svg" alt="" uk-svg>
+                                        </div>
+                                    </div>
+
+                                    <div>
+                                        <div class="uk-panel">
+                                            <img src="images/icons/git_logo.svg" alt="" uk-svg>
+                                        </div>
+                                    </div>
+
+                                    <div>
+                                        <div class="uk-panel">
+                                            <img src="images/icons/sass_logo.svg" alt="" uk-svg>
+                                        </div>
+                                    </div>
+
+                                    <div>
+                                        <div class="uk-panel">
+                                            <img src="images/icons/less_logo.svg" alt="" uk-svg>
+                                        </div>
+                                    </div>
+
+                                    <div>
+                                        <div class="uk-panel">
+                                            <img src="images/icons/wordpress_logo.svg" alt="" uk-svg>
+                                        </div>
+                                    </div>
+
+                                    <div>
+                                        <div class="uk-panel">
+                                            <img src="images/icons/github_logo.svg" alt="" uk-svg>
+                                        </div>
+                                    </div>
+
+                                    <div>
+                                        <div class="uk-panel">
+                                            <img src="images/icons/uikit_logo.svg" alt="" uk-svg>
+                                        </div>
+                                    </div>
+
+                                    <div>
+                                        <div class="uk-panel">
+                                            <img src="images/icons/bootstrap.svg" alt="" uk-svg>
+                                        </div>
+                                    </div>
+
+                                    <div>
+                                        <div class="uk-panel">
+                                            <img src="images/icons/gulp_logo.svg" alt="" uk-svg>
+                                        </div>
+                                    </div>
+
+                                    <div>
+                                        <div class="uk-panel">
+                                            <img src="images/icons/php_logo.svg" alt="" uk-svg>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                <h3 class="uk-heading-line"><span>Design-related knowledge</span></h3>
+
+                                <div class="uk-grid-small" uk-grid>
+
+                                    <div>
+                                        <div class="uk-panel">
+                                            <img src="images/icons/ps_logo.svg" alt="" uk-svg>
+                                        </div>
+                                    </div>
+
+                                    <div>
+                                        <div class="uk-panel">
+                                            <img src="images/icons/ai_logo.svg" alt="" uk-svg>
+                                        </div>
+                                    </div>
+
+                                    <div>
+                                        <div class="uk-panel">
+                                            <img src="images/icons/xd_logo.svg" alt="" uk-svg>
+                                        </div>
+                                    </div>
+
+                                    <div>
+                                        <div class="uk-panel">
+                                            <img src="images/icons/figma_logo.svg" alt="" uk-svg>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
     </main>
     <!-- Welcome section ENDS -->
+
+    <!-- Menu Panel -->
+    <div id="menu" class="menu menu--hidden">
+
+        <!-- Menu Mobile BEGINS -->
+        <a href="#" class="menu-icon" id="menu-icon" data-mouse="hover">
+            <svg width="40" height="32" viewBox="0 0 40 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <line y1="1" x2="40" y2="1" stroke="#333333" stroke-width="2"/>
+                <line y1="31" x2="40" y2="31" stroke="#333333" stroke-width="2"/>
+                <line y1="16" x2="40" y2="16" stroke="#333333" stroke-width="2"/>
+            </svg>
+        </a>        
+        <!-- Menu Mobile ENDS -->
+
+        <nav class="menu__nav">
+            <ul>
+                <li class="menu__item">
+                    <a href="#">
+                        About me
+                    </a>
+                </li>
+                <li class="menu__item">
+                    <a href="#">
+                        Professional Experience
+                    </a>
+                </li>
+                <li class="menu__item">
+                    <a href="#">
+                        Projects I have worked on
+                    </a>
+                </li>
+                <li class="menu__item">
+                    <a href="#">
+                        Get in touch
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
 
     <!-- Custom cursor -->
     <div class="cursor" id="cursor"></div>
     <div class="pointer pointer-hover" id="pointer"></div>
 
     <script type="text/javascript" src="js/cursor.js"></script>
+    <script type="text/javascript" src="js/menu.js"></script>
+    <script type="text/javascript" src="js/uikit-icons.min.js"></script>
+    <script type="text/javascript" src="js/uikit.min.js"></script>
 
 </body>
 </html>

@@ -1,0 +1,166 @@
+@import "variables";
+@import "flex";
+
+.menu-icon-header {
+    transition: all .5s ease-out;
+
+    svg {
+        height: 50px;
+        
+        & > line {
+            stroke-width: 3px;
+            transition: all .5s ease-out;
+        }
+
+    }
+    
+}
+
+.menu-icon {
+    position: absolute;
+    top: 35px;
+    left: 40px;
+    z-index: 500;
+}
+
+.menu-icon-header,
+.menu-icon {
+    transition: all .5s ease-out;
+    height: 50px;
+
+    svg {
+        height: 50px;
+        
+        & > line {
+            stroke-width: 2px;
+            transition: all .5s ease-out;
+        }
+
+    }
+
+    &.menu-icon--open {
+        left: 40px;
+
+        svg {
+            
+            & > line {
+                stroke: #fff;
+            }
+
+            & > line:nth-child(1) {
+                transform: rotate(35deg) translateY(-9px);
+            }
+
+            & > line:nth-child(2) {
+                transform: rotate(-35deg) translateY(9px);
+                transform-origin: left bottom;
+            }
+
+            & > line:nth-child(3) {
+                opacity: 0;
+            }
+
+        }
+
+    }
+
+}
+
+.menu {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    right: 0;
+    left: 0;
+    background: darken(@global-black-color, 15%);
+    transition: all .5s ease-in;
+
+    @media screen and (min-width: @break-m) {
+        left: 50%;
+        width: 50%;
+    }
+
+    &.menu--hidden {
+        // right: initial;
+        left: 100%;
+    }
+
+    &, nav {
+        height: 100vh;
+    }
+
+    nav {
+        .flex;
+        .flex-middle;
+        .flex-right;
+        padding: 80px 50px;
+
+        @media screen and (min-width: @break-m) {
+            padding: 80px 60px;
+        }
+
+    }
+
+    ul {
+        padding: 0;
+        list-style: none;
+        text-align: right;
+    }
+
+    .menu__item {
+
+        & > a {
+            color: #fff;
+            font-size: 1.5rem;
+            font-weight: 600;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            .flex;
+            .flex-middle;
+            .flex-right;
+
+            @media screen and (min-width: @break-m) {
+                font-size: 2rem;
+                opacity: 0.5;
+            }
+
+            &, &:hover {
+                text-decoration: none;
+            }
+            
+            &, &:after {
+                transition: all .2s ease-out;
+            }
+
+            &:after {
+                content: "<";
+                display: inline-block;
+                margin-left: 1.5625rem;
+                position: relative;
+                right: 0;
+
+                @media screen and (min-width: @break-m) {
+                    margin-left: 1rem;
+                }
+
+            }
+
+            &:hover {
+                // transform: scale(1.1);
+                // transform-origin: right center;
+                opacity: 1;
+                
+                &:after {
+                    right: 15px;
+                }
+            }
+
+        }
+
+        & + .menu__item {
+            margin-top: 10px;
+        }
+
+    }
+
+}

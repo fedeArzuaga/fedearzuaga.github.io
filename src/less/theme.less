@@ -16,11 +16,20 @@ html {
 
 body {
     background: @background-100;
+    overflow-x: hidden;
 }
 
 a {
     color: @global-black-color;
     text-decoration: underline;
+}
+
+a, [data-mouse="hover"] {
+    cursor: none;
+}
+
+.nowrap-word {
+    white-space: nowrap;
 }
 
 .panel {
@@ -40,7 +49,11 @@ img {
     min-height: 100vh;
     
     &.welcome-section {
-        min-height: calc(100vh - 107.7px);
+        min-height: calc(100vh - 120px);
+    }
+
+    &.muted-section {
+        background: @background-200;
     }
 
 }
@@ -48,10 +61,10 @@ img {
 .welcome-section {
 
     .welcome-img {
-        max-height: calc(100vh - 107.7px);
+        max-height: calc(100vh - 120px);
     }
     .welcome-container {
-        min-height: calc(100vh - 107.7px);
+        min-height: calc(100vh - 120px);
     }
 
     .welcome-content {
@@ -100,6 +113,48 @@ img {
 
         & > .button {
             margin-top: 2.5rem;
+        }
+
+    }
+
+}
+
+.about-me-section {
+
+    .about-me-grid {
+        
+        @media screen and (min-width: @break-m) {
+            margin-left: -160px;
+        }
+
+        & > div {
+
+            @media screen and (min-width: @break-m) {
+                padding-left: 160px;
+            }
+        }
+
+    }
+
+    .strengths-grid {
+        & > div {
+            @media screen and (min-width: @break-m) {
+                width: 40%;
+            }
+        }
+    }
+
+    .skills-section {
+
+        .uk-grid {
+            & > div {
+                width: auto;
+            }
+        }
+
+        .uk-svg {
+            width: 50px;
+            height: 50px;
         }
 
     }

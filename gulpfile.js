@@ -16,6 +16,12 @@ function html() {
         .pipe( dest('./dist') )
 }
 
+// Copy UIkit files
+function uikit() {
+    return src('./src/uikit/**/*.{css,js}')
+        .pipe( dest('./dist') )
+}
+
 // Less
 function less() {
     return src('src/less/**/*.less')
@@ -29,7 +35,7 @@ function less() {
 
 // Images
 function images() {
-    return src(['src/**/*.png','src/**/*.jpg','src/**/*.gif','src/**/*.jpeg'])
+    return src(['src/**/*.png','src/**/*.jpg','src/**/*.gif','src/**/*.jpeg','src/**/*.svg'])
         .pipe(dest('./dist'))
 }
 
@@ -68,6 +74,7 @@ function watchTasks() {
 // Default gulp
 exports.default = series(
     html,
+    uikit,
     less,
     images,
     js,
