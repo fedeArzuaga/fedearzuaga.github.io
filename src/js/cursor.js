@@ -1,6 +1,6 @@
 const cursor = document.querySelector("#cursor"),
       pointer = document.querySelector("#pointer"),
-      dataMouseElements = Array.from(document.querySelectorAll('[data-mouse="hover"], a'));
+      dataMouseElements = Array.from(document.querySelectorAll('[data-mouse="hover"], a, .uk-dotnav'));
 
 if ( window.screen.width > 960 ) {
     document.addEventListener( 'mousemove', e => {

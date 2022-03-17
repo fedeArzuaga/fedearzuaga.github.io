@@ -2,6 +2,23 @@
 
 h1, h2, h3, h4, h5, h6 {
     color: @global-black-color;
+    
+    * + & {
+        margin-top: 1.25rem;
+        margin-bottom: 0.625rem;
+    }
+
+}
+
+* + address, 
+* + dl, 
+* + fieldset, 
+* + figure, 
+* + ol, 
+* + p, 
+* + pre, 
+* + ul {
+    margin-top: 0.625rem;
 }
 
 .uk-heading-line {

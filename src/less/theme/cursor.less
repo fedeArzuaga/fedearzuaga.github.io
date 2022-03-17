@@ -7,6 +7,13 @@
     transform: translate(-50%, -50%);
     pointer-events: none;
     opacity: 0;
+    display: none;
+    z-index: 3000;
+
+    @media screen and (min-width: @break-m) {
+        display: block;
+    }
+
 }
 
 .cursor {

@@ -3,9 +3,35 @@
 
 .menu-icon-header {
     transition: all .5s ease-out;
+    position: relative;
+
+    &:before {
+        content: "";
+        display: block;
+        width: 80px;
+        height: 80px;
+        background: #fff;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        box-shadow: 0 3px 5px rgba(0,0,0,0.1);
+        border-radius: 50%;
+
+        @media screen and (min-width: @break-m) {
+            content: none;
+        }
+
+    }
+
+    &.menu-icon--open {
+        left: 0 !important;
+    }
 
     svg {
         height: 50px;
+        position: relative;
+        z-index: 10;
         
         & > line {
             stroke-width: 3px;
@@ -74,6 +100,7 @@
     left: 0;
     background: darken(@global-black-color, 15%);
     transition: all .5s ease-in;
+    z-index: 2500;
 
     @media screen and (min-width: @break-m) {
         left: 50%;
