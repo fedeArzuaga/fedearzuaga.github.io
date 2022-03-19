@@ -1,5 +1,5 @@
 // List dependencies
-const { src, dest, watch, series } = require('gulp');
+const { src, dest, watch, series, parallel } = require('gulp');
 const compileLess = require('gulp-less');
 const prefixer = require('gulp-autoprefixer');
 const minify = require('gulp-clean-css');
@@ -72,6 +72,7 @@ function watchTasks() {
 }
 
 // Default gulp
+exports.build = parallel(html, uikit, less, images, js);
 exports.default = series(
     html,
     uikit,
