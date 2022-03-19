@@ -23,7 +23,8 @@
     transform: translate(-50%, -50%);
 }
 
-.pointer {
+.pointer,
+.pointer.hover-effect-for-icons {
     width: 6px;
     height: 6px;
     background: darken(@global-darkgray-color, 20%);
@@ -37,7 +38,9 @@
     opacity: 1;
 }
 
-.cursor.hover-effect {
+.cursor.hover-effect,
+.cursor.hover-effect-for-icons {
+    transition: all 0.1s ease-in-out;
     opacity: 0;
 }
 

@@ -1,6 +1,6 @@
 const cursor = document.querySelector("#cursor"),
       pointer = document.querySelector("#pointer"),
-      dataMouseElements = Array.from(document.querySelectorAll('[data-mouse="hover"], a, .uk-dotnav'));
+      dataMouseElements = Array.from(document.querySelectorAll('[data-mouse="hover"], a, .uk-dotnav, .icon'));
 
 if ( window.screen.width > 960 ) {
     document.addEventListener( 'mousemove', e => {
@@ -20,13 +20,27 @@ if ( window.screen.width > 960 ) {
     
     for ( let i = 0; i < dataMouseElements.length; i++ ) {
         dataMouseElements[i].addEventListener( 'mousemove', e => {
-            cursor.classList.add('hover-effect');
-            pointer.classList.add('hover-effect');
+
+            if ( dataMouseElements[i].classList.contains('icon') ) {
+                cursor.classList.add('hover-effect-for-icons');
+                pointer.classList.add('hover-effect-for-icons');
+            } else {
+                cursor.classList.add('hover-effect');
+                pointer.classList.add('hover-effect');
+            }
+
         });
         dataMouseElements[i].addEventListener( 'mouseout', e => {
-            cursor.classList.remove('hover-effect');
-            pointer.classList.remove('hover-effect');
-        })
+
+            if ( dataMouseElements[i].classList.contains('icon') ) {
+                cursor.classList.remove('hover-effect-for-icons');
+                pointer.classList.remove('hover-effect-for-icons');
+            } else {
+                cursor.classList.remove('hover-effect');
+                pointer.classList.remove('hover-effect');
+            }
+            
+        });
     }
 }
 

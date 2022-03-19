@@ -8,8 +8,8 @@
     &:before {
         content: "";
         display: block;
-        width: 80px;
-        height: 80px;
+        width: 60px;
+        height: 60px;
         background: #fff;
         position: absolute;
         left: 50%;
@@ -20,6 +20,7 @@
 
         @media screen and (min-width: @break-m) {
             content: none;
+
         }
 
     }
@@ -32,6 +33,11 @@
         height: 50px;
         position: relative;
         z-index: 10;
+        width: 25px;
+
+        @media screen and (min-width: @break-m) {
+            width: 40px;
+        }
         
         & > line {
             stroke-width: 3px;
@@ -103,6 +109,11 @@
     z-index: 2500;
 
     @media screen and (min-width: @break-m) {
+        left: 25%;
+        width: 75%;
+    }
+
+    @media screen and (min-width: @break-xl) {
         left: 50%;
         width: 50%;
     }
@@ -138,7 +149,7 @@
 
         & > a {
             color: #fff;
-            font-size: 1.5rem;
+            font-size: 2rem;
             font-weight: 600;
             padding-top: 10px;
             padding-bottom: 10px;
@@ -147,8 +158,12 @@
             .flex-right;
 
             @media screen and (min-width: @break-m) {
-                font-size: 2rem;
+                font-size: 2.5rem;
                 opacity: 0.5;
+            }
+
+            @media screen and (min-width: @break-xl) {
+                font-size: 3rem;
             }
 
             &, &:hover {

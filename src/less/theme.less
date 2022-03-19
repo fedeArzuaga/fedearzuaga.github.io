@@ -4,7 +4,8 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    // cursor: none;
+    cursor: none;
+    scroll-behavior: smooth;
 }
 
 html {
@@ -119,9 +120,14 @@ img {
 
     .welcome-img {
         max-height: 200px;
+        border-radius: 50%;
 
-        @media screen and (min-width: @break-m) {
-            max-height: none;
+        @media screen and (min-width: @break-s) {
+            max-height: 300px;
+        }
+
+        @media screen and (min-width: @break-l) {
+            max-height: 400px;
         }
 
     }
@@ -180,6 +186,29 @@ img {
 
         & > .button {
             margin-top: 1rem;
+        }
+
+    }
+
+    .social-media {
+        display: none;
+        list-style: none;
+        padding-left: 0;
+
+        @media screen and (min-width: @break-m) {
+            display: block;
+        }
+
+        & > li {
+
+            & + li {
+                margin-top: 1.25rem;
+            }
+            
+            svg {
+                width: 1.25rem;
+            }
+
         }
 
     }
@@ -282,11 +311,25 @@ img {
 
 .projects-section {
 
+    .uk-slider-items {
+        margin-left: -80px;
+
+        & > li {
+            padding-left: 80px;
+        }
+
+    }
+
     .featured-image {
         position: relative;
         display: block;
-        filter: brightness(1);
         transition: all .3s ease-out;
+
+        & > img {
+            filter: brightness(1);
+            transition: all .3s ease-ou;
+            box-shadow: 0 3px 5px rgba(0,0,0,0.1);
+        }
 
         &:before {
             content: "+";
@@ -311,7 +354,10 @@ img {
         }
 
         &:hover {
-            filter: brightness(0.6);
+            
+            & > img {
+                filter: brightness(0.5);
+            }
 
             &:before {
                 opacity: 1;
@@ -322,7 +368,7 @@ img {
     }
 
     .title-container {
-        margin-top: 1rem;
+        margin-top: 1.5rem;
 
         h3 {
             margin: 0;
@@ -358,11 +404,105 @@ img {
 
         & > div {
             width: auto;
+            .flex;
+            .flex-middle;
         }
 
         svg {
             width: 30px;
         }
+    }
+
+}
+
+.contact-section {
+
+    h2 {
+        font-size: 4rem;
+        font-weight: 700;
+
+        @media screen and (min-width: @break-m) {
+            font-size: 72px;
+        }
+    }
+
+    .grid-container {
+        flex-direction: column;
+
+        @media screen and (min-width: @break-s) {
+            flex-direction: row;
+        }
+
+        @media screen and (min-width: @break-s) {
+            margin-left: -160px;
+        }
+
+        & > div {
+            
+            @media screen and (min-width: @break-s) {
+                padding-left: 160px;
+            }
+            
+        }
+
+    }
+
+    .grid-icons {
+        margin-top: 1.25rem;
+        flex-direction: column;
+
+        @media screen and (min-width: @break-s) {
+            flex-direction: row;
+        }
+
+        @media screen and (min-width: @break-m) {
+            margin-top: 0;
+            margin-left: -1.5625rem;
+        }
+
+        & > * {
+            
+            @media screen and (min-width: @break-m) {
+                padding-left: 1.5625rem;
+            }
+            
+        }
+    }
+    
+    svg {
+        width: 50px;
+    }
+
+}
+
+.arrow-up {
+    background: @global-black-color;
+    width: 50px;
+    height: 50px;
+    .flex;
+    .flex-middle;
+    .flex-center;
+    border-radius: 50%;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    border: 2px solid @global-black-color;
+    transition: all .3s ease-out;
+
+    @media screen and (min-width: @break-m) {
+        bottom: 40px;
+        right: 40px;
+    }
+
+    &:hover {
+        background: rgba(0,0,0,0);
+
+        svg {
+            path {
+                fill: @global-black-color;
+            }
+        }
+
     }
 
 }
