@@ -33,19 +33,6 @@ linksInMenu.forEach( function( element ) {
         menuIcon.classList.remove("menu-icon--open");
         menuIconHeader.classList.remove("menu-icon--open");
         menuPanel.classList.add("menu--hidden");
-
-        // if ( !menuIcon.classList.contains("menu-icon--open") ) {
-        //     menuIcon.classList.add("menu-icon--open")
-        //     menuIconHeader.classList.add("menu-icon--open")
-        // } else {
-            
-        // }
-    
-        // if ( menuPanel.classList.contains("menu--hidden") ) {
-        //     menuPanel.classList.remove("menu--hidden")
-        // } else {
-            
-        // }
     
     });
 });
