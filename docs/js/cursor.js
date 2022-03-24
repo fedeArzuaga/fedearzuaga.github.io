@@ -4,7 +4,7 @@ var cursor = document.querySelector("#cursor"),
     pointer = document.querySelector("#pointer"),
     dataMouseElements = Array.from(document.querySelectorAll('[data-mouse="hover"], a, .uk-dotnav, .icon'));
 
-if (window.screen.width > 960) {
+if (isTouchAvailable) {
   document.addEventListener('mousemove', function (e) {
     cursor.classList.add('on-screen');
     pointer.classList.add('on-screen');
@@ -42,4 +42,8 @@ if (window.screen.width > 960) {
   for (var i = 0; i < dataMouseElements.length; i++) {
     _loop(i);
   }
+}
+
+function isTouchAvailable() {
+  return 'ontouchstart' in window || navigator.maxTouchPoints > 0 || navigator.msMaxTouchPoints > 0;
 }
